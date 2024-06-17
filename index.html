@@ -13,6 +13,7 @@
 <body>
     <nav class="navbar navbar-light" style="background-color: lightgreen;">
         <span class="navbar-brand mb-0 h1">OAR Constraint Calculator</span>
+        <a style="color:black" href="https://github.com/fractionasian/oar-constraints">GitHub repo</a>
     </nav>
     <div class="container mt-5">
         <div class="table-responsive">
@@ -42,14 +43,14 @@
                     <tr>
                         <td>OAR 1</td>
                         <td><input type="number" class="form-control" id="dose1" value="20" oninput="calculateDose1()"></td>
-                        <td><input type="number" class="form-control" id="alphaBeta1" value="10.0" oninput="calculateDose1()"></td>
+                        <td><input type="number" class="form-control" id="alphaBeta1" value="3.0" oninput="calculateDose1()"></td>
                         <td id="dose1Eqd2"></td>
                         <td id="dose1NewDose"></td>
                     </tr>
                     <tr>
                         <td>OAR 2</td>
-                        <td><input type="number" class="form-control" id="dose2" value="15" oninput="calculateDose2()"></td>
-                        <td><input type="number" class="form-control" id="alphaBeta2" value="10.0" oninput="calculateDose2()"></td>
+                        <td><input type="number" class="form-control" id="dose2" value="50" oninput="calculateDose2()"></td>
+                        <td><input type="number" class="form-control" id="alphaBeta2" value="3.0" oninput="calculateDose2()"></td>
                         <td id="dose2Eqd2"></td>
                         <td id="dose2NewDose"></td>
                     </tr>
@@ -63,12 +64,16 @@
                 </tbody>
             </table>
         </div>
+        <div><p>This is my first attempt at a conversion app for OAR constraints. <br>The default values reflect the conversion from conventional lung (60 Gy/30#) to hypofractionated lung (55 Gy/20#).</p>
+        <p>For example, Lung V20<35% for conventional fractionation becomes V18<35% for hypofractionation.</p>
+        <p>And Spinal Cord DMax<50 Gy becomes DMax<44 Gy.</p></div>
     </div>
-
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+
+
 </body>
 </html>
