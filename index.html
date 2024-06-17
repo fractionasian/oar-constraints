@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiation Dose Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="lightgreen">
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color: lightgreen;">
+        <span class="navbar-brand mb-0 h1">OAR Constraint Calculator</span>
+    </nav>
+    <div class="container mt-5">
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+                <tbody>
+                    <tr>
+                        <td>Number of fractions (#)</td>
+                        <td><input type="number" class="form-control" id="fractions" value="30" oninput="calculateAllResults()"></td>
+                    </tr>
+                    <tr>
+                        <td>New number of fractions (#)</td>
+                        <td><input type="number" class="form-control" id="targetFractions" value="20" oninput="calculateAllResults()"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered table-sm">
+                <thead class="thead-light">
+                    <tr>
+                        <th></th>
+                        <th>Constraint (Gy)</th>
+                        <th>alpha/beta ratio (Gy)</th>
+                        <th>EQD2 (Gy)</th>
+                        <th>New Constraint (Gy)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>OAR 1</td>
+                        <td><input type="number" class="form-control" id="dose1" value="20" oninput="calculateDose1()"></td>
+                        <td><input type="number" class="form-control" id="alphaBeta1" value="10.0" oninput="calculateDose1()"></td>
+                        <td id="dose1Eqd2"></td>
+                        <td id="dose1NewDose"></td>
+                    </tr>
+                    <tr>
+                        <td>OAR 2</td>
+                        <td><input type="number" class="form-control" id="dose2" value="15" oninput="calculateDose2()"></td>
+                        <td><input type="number" class="form-control" id="alphaBeta2" value="10.0" oninput="calculateDose2()"></td>
+                        <td id="dose2Eqd2"></td>
+                        <td id="dose2NewDose"></td>
+                    </tr>
+                    <tr>
+                        <td>OAR 3</td>
+                        <td><input type="number" class="form-control" id="dose3" value="5" oninput="calculateDose3()"></td>
+                        <td><input type="number" class="form-control" id="alphaBeta3" value="10.0" oninput="calculateDose3()"></td>
+                        <td id="dose3Eqd2"></td>
+                        <td id="dose3NewDose"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
